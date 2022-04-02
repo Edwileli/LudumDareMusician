@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
     public void PlayGameButton()
     {
         Debug.Log("Play");
+        SceneManager.LoadScene("main_scene", LoadSceneMode.Single);
     }
 
     public void OpenHelpWindowButton()
@@ -17,6 +17,7 @@ public class MenuButtons : MonoBehaviour
     public void QuitGameButton()
     {
         Debug.Log("Quit");
+        Application.Quit();
     }
 
     public void OpenAboutWindowButton()
