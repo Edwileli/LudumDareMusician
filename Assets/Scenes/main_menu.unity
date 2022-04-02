@@ -367,6 +367,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
+      propertyPath: menuButton.Path
+      value: event:/Menu/Menu button click
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
+      propertyPath: menuButton.Guid.Data1
+      value: 2102954121
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
+      propertyPath: menuButton.Guid.Data2
+      value: 1217086997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
+      propertyPath: menuButton.Guid.Data3
+      value: -81368385
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
+      propertyPath: menuButton.Guid.Data4
+      value: -795339794
+      objectReference: {fileID: 0}
     - target: {fileID: 4657649020133279129, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
       propertyPath: m_Name
       value: SoundManager
