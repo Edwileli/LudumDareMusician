@@ -3,15 +3,18 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
 {
-    public InteractiveGameObjectSO objectSO = null;
-    public List<AAction> actionToDisplay = null;
+    public InteractiveGameObjectSO ObjectSO = null;
 
+    private List<AAction> actionToDisplay = null;
     private ActionsManager actionsManager = null;
+    private UIInGameManager uIInGameManager = null;
+    private Camera camera = null;
+
     void Awake()
     {
-        if(!objectSO)
+        if (!ObjectSO)
         {
-            Debug.Log("objectSO missing on "+gameObject.name);
+            Debug.Log("objectSO missing on " + gameObject.name);
         }
 
         actionsManager = FindObjectOfType<ActionsManager>();
@@ -19,15 +22,42 @@ public class InteractiveObject : MonoBehaviour
         {
             Debug.Log("actionsManager missing on " + gameObject.name);
         }
+
+        uIInGameManager = FindObjectOfType<UIInGameManager>();
+        if (!uIInGameManager)
+        {
+            Debug.Log("uIInGameManager missing on " + gameObject.name);
+        }
+        
+        camera = FindObjectOfType<Camera>();
+        if (!camera)
+        {
+            Debug.Log("camera missing on " + gameObject.name);
+        }
     }
 
     private void OnMouseDown()
     {
-        Debug.Log(gameObject.name+" clicked");
-        actionToDisplay = actionsManager.FindAvailableActionForAnObject(objectSO);
+        Debug.Log(gameObject.name + " clicked");
+        actionToDisplay = actionsManager.FindAvailableActionForAnObject(ObjectSO);
         foreach (AAction aAction in actionToDisplay)
         {
-            Debug.Log("action "+ aAction.actionSO.ActionName + " is available on this object");
-        } 
+            Debug.Log("action " + aAction.actionSO.ActionName + " is available on this object");
+        }
+
+        Vector3 positionToDisplayActions = Vector3.Lerp(camera.transform.position, transform.position, 0.9f);
+
+        uIInGameManager.DisplayPanelAction(positionToDisplayActions, actionToDisplay);
+
+
+        /*
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        {
+            Debug.Log("Did Hit");
+            uIInGameManager.DisplayPanelAction(hit.transform.position, actionToDisplay);
+        }*/
     }
+
+
 }
