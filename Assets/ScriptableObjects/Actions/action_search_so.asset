@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947dd30091f141446b4388d90f76d58a, type: 3}
   m_Name: action_search_so
   m_EditorClassIdentifier: 
-  ActionName: Take
+  ActionName: Search inside
