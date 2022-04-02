@@ -6,6 +6,8 @@ public class ActionButton : MonoBehaviour
     public Button ButtonComponent = null;
     public Text TextComponent = null;
 
+    private ActionSO actionSO;
+
     void Awake()
     {
         if (!ButtonComponent)
@@ -22,5 +24,7 @@ public class ActionButton : MonoBehaviour
     public void InitActionButton(ActionSO actionSO)
     {
         TextComponent.text = actionSO.ActionName;
+        this.actionSO = actionSO;
     }
+
 }

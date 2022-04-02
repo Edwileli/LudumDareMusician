@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InteractiveObject : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class InteractiveObject : MonoBehaviour
     private List<AAction> actionToDisplay = null;
     private ActionsManager actionsManager = null;
     private UIInGameManager uIInGameManager = null;
-    private Camera camera = null;
+    private Camera currentCamera = null;
 
     void Awake()
     {
@@ -28,9 +29,9 @@ public class InteractiveObject : MonoBehaviour
         {
             Debug.Log("uIInGameManager missing on " + gameObject.name);
         }
-        
-        camera = FindObjectOfType<Camera>();
-        if (!camera)
+
+        currentCamera = FindObjectOfType<Camera>();
+        if (!currentCamera)
         {
             Debug.Log("camera missing on " + gameObject.name);
         }
@@ -38,14 +39,18 @@ public class InteractiveObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(gameObject.name + " clicked");
-        actionToDisplay = actionsManager.FindAvailableActionForAnObject(ObjectSO);
-        foreach (AAction aAction in actionToDisplay)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            Debug.Log("action " + aAction.actionSO.ActionName + " is available on this object");            
-        }
-        Vector3 positionToDisplayActions = Vector3.Lerp(camera.transform.position, transform.position, 0.9f);
+            Debug.Log(gameObject.name + " clicked");
+            actionToDisplay = actionsManager.FindAvailableActionForAnObject(ObjectSO);
+            Vector3 positionToDisplayActions = Vector3.Lerp(currentCamera.transform.position, transform.position, 0.9f);
 
-        uIInGameManager.DisplayPanelAction(positionToDisplayActions, actionToDisplay);
+            uIInGameManager.DisplayPanelAction(positionToDisplayActions, actionToDisplay);
+        }
+        else
+        {
+            //Debug.Log("Clicked on the UI");
+        }
+
     }
 }

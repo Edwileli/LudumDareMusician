@@ -43,7 +43,6 @@ public class UIInGameManager : MonoBehaviour
             GameObject instantiatedButton = Instantiate(ActionButtonPrefab, instantiatedPanel.transform);
             instantiatedButton.GetComponent<ActionButton>().InitActionButton(action.actionSO);
             instantiatedActionButtonList.Add(instantiatedButton);
-            //todo modify button so it does something
         }
 
         Canvas canvas = instantiatedCanvas.GetComponent<Canvas>();
