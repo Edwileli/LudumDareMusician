@@ -41,6 +41,7 @@ public class UIInGameManager : MonoBehaviour
         foreach (AAction action in actionList)
         {
             GameObject instantiatedButton = Instantiate(ActionButtonPrefab, instantiatedPanel.transform);
+            instantiatedButton.GetComponent<ActionButton>().InitActionButton(action.actionSO);
             instantiatedActionButtonList.Add(instantiatedButton);
             //todo modify button so it does something
         }

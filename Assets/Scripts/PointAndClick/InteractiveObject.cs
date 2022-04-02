@@ -42,22 +42,10 @@ public class InteractiveObject : MonoBehaviour
         actionToDisplay = actionsManager.FindAvailableActionForAnObject(ObjectSO);
         foreach (AAction aAction in actionToDisplay)
         {
-            Debug.Log("action " + aAction.actionSO.ActionName + " is available on this object");
+            Debug.Log("action " + aAction.actionSO.ActionName + " is available on this object");            
         }
-
         Vector3 positionToDisplayActions = Vector3.Lerp(camera.transform.position, transform.position, 0.9f);
 
         uIInGameManager.DisplayPanelAction(positionToDisplayActions, actionToDisplay);
-
-
-        /*
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
-        {
-            Debug.Log("Did Hit");
-            uIInGameManager.DisplayPanelAction(hit.transform.position, actionToDisplay);
-        }*/
     }
-
-
 }
