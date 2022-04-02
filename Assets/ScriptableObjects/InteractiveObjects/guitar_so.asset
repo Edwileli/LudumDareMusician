@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectName: Guitar
   ObjectIcon: {fileID: 21300000, guid: 2751686f358633048a9c2e9894777b27, type: 3}
-  AvailableActions:
-  - {fileID: 11400000, guid: d2f9931a4e9809841977c22c89a71749, type: 2}
+  ActionsForThisObject:
   - {fileID: 11400000, guid: f500f67c797e2f146ac34d98ffef0570, type: 2}
+  - {fileID: 11400000, guid: d2f9931a4e9809841977c22c89a71749, type: 2}
   - {fileID: 11400000, guid: 2e99259a5ad170048b825ed89d2c82e5, type: 2}

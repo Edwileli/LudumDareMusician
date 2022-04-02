@@ -6,5 +6,5 @@ public class InteractiveGameObjectSO : ScriptableObject
 {
     public string ObjectName = "";
     public Sprite ObjectIcon = null;
-    public List<ActionSO> AvailableActions = new List<ActionSO>();
+    public List<ActionSO> ActionsForThisObject = new List<ActionSO>();
 }
