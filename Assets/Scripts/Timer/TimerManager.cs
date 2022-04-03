@@ -25,13 +25,7 @@ public class TimerManager : MonoBehaviour
             Debug.Log("timerTextScript missing on " + gameObject.name);
         }
         timerText = timerTextScript.GetComponent<Text>();
-        timeWhenTheGameBegins = Time.time;
-        Debug.Log("timeWhenTheGameBegins " + timeWhenTheGameBegins);
-    }
-
-    public void AddTime(float timeToAdd)
-    {
-        timeModifiers += timeToAdd;
+        timerText.gameObject.SetActive(false);//hiding timer before the game starts
     }
 
     private void Update()
@@ -58,5 +52,21 @@ public class TimerManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(timeRemaining - minutes * 60);
         string niceTime = string.Format("{0:00}:{1:00}", minutes, seconds);
         timerText.text = niceTime;
+    }
+
+    public void AddTime(float timeToAdd)
+    {
+        timeModifiers += timeToAdd;
+    }
+
+    //Called by begin button on Intro text
+    public void BeginTimer()
+    {
+        //init timer
+        timeWhenTheGameBegins = Time.time;
+        Debug.Log("timeWhenTheGameBegins " + timeWhenTheGameBegins);
+
+        //display timer
+        timerText.gameObject.SetActive(true);
     }
 }
