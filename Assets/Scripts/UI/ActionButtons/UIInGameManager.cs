@@ -13,6 +13,7 @@ public class UIInGameManager : MonoBehaviour
     private GameObject instantiatedCanvas = null;
     private GameObject instantiatedPanel = null;
     private List<GameObject> instantiatedActionButtonList = new List<GameObject>();
+    private IEnumerator closeDescriptionCoroutine;
 
     void Awake()
     {
@@ -32,6 +33,8 @@ public class UIInGameManager : MonoBehaviour
         {
             Debug.Log("ActionDescription missing on " + gameObject.name);
         }
+
+        ActionDescription.gameObject.SetActive(false);
     }
 
     public void DisplayPanelAction(Vector3 position, List<AAction> actionList)
@@ -46,8 +49,13 @@ public class UIInGameManager : MonoBehaviour
         foreach (AAction action in actionList)
         {
             GameObject instantiatedButton = Instantiate(ActionButtonPrefab, instantiatedPanel.transform);
-            instantiatedButton.GetComponent<ActionButton>().InitActionButton(action.actionSO);
+            ActionButton actionButton = instantiatedButton.GetComponent<ActionButton>();
+            actionButton.InitActionButton(action.actionSO);
+            Button button = actionButton.GetComponent<Button>();
+            button.onClick.AddListener(() => action.PerformAction());
             instantiatedActionButtonList.Add(instantiatedButton);
+
+            //todo remove action from object once it's done
         }
 
         Canvas canvas = instantiatedCanvas.GetComponent<Canvas>();
@@ -84,5 +92,19 @@ public class UIInGameManager : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvas.transform as RectTransform, screenPos, parentCanvas.worldCamera, out movePos);
         //Convert the local point to world point
         return parentCanvas.transform.TransformPoint(movePos);
+    }
+
+    public void SetDescription(string description)
+    {
+        ActionDescription.gameObject.SetActive(true);
+        ActionDescription.text = description;
+        closeDescriptionCoroutine = HideDescription(10);
+        StartCoroutine(closeDescriptionCoroutine);
+    }
+
+    private IEnumerator HideDescription(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+        ActionDescription.gameObject.SetActive(true);
     }
 }

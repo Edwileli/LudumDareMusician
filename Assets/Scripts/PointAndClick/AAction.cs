@@ -20,13 +20,13 @@ public abstract class AAction : MonoBehaviour
         {
             Debug.Log("timerManager missing on " + gameObject.name);
         }
-
     }
+
     public virtual void PerformAction()
     {
-        //todo display description
-        //todo add time to timer
-        //clean canvas
+        uIInGameManager.CleanActionCanvas();
+        uIInGameManager.SetDescription(actionSO.ActionDescription);
+        timerManager.AddTime(actionSO.DelayObtained);
     }
 
     //todo call PerformAction() on button click (delegate)
