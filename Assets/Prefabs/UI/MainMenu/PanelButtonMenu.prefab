@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6140218796906719405}
   - component: {fileID: 6551397442418086118}
   m_Layer: 5
-  m_Name: PanelMenu
+  m_Name: PanelButtonMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 0, y: 600}
+  m_SizeDelta: {x: 0, y: 500}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &7105802839689784084
 CanvasRenderer:
