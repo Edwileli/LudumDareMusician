@@ -43,3 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58116fb2d37392545841ecc00666833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeGivenAtStart: 60
+  timeModifiers: 0
+  timeThresholdForChangeColor: 10
+  normalColor: {r: 0, g: 0, b: 0, a: 1}
+  colorWhenThereTimeEnds: {r: 1, g: 0, b: 0, a: 1}
