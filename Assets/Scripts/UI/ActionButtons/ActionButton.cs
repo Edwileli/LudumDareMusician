@@ -23,7 +23,7 @@ public class ActionButton : MonoBehaviour
 
     public void InitActionButton(ActionSO actionSO)
     {
-        TextComponent.text = actionSO.ActionName;
+        TextComponent.text = actionSO.ActionTitle;
         this.actionSO = actionSO;
     }
 

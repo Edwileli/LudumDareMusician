@@ -8,6 +8,7 @@ public class UIInGameManager : MonoBehaviour
     public GameObject CanvasActionPrefab = null;
     public GameObject PanelActionsPrefab = null;
     public GameObject ActionButtonPrefab = null;
+    public Text ActionDescription = null;
 
     private GameObject instantiatedCanvas = null;
     private GameObject instantiatedPanel = null;
@@ -26,6 +27,10 @@ public class UIInGameManager : MonoBehaviour
         if (!ActionButtonPrefab)
         {
             Debug.Log("ActionButton missing on " + gameObject.name);
+        }
+        if (!ActionDescription)
+        {
+            Debug.Log("ActionDescription missing on " + gameObject.name);
         }
     }
 
@@ -50,7 +55,7 @@ public class UIInGameManager : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, position, canvas.worldCamera, out movePos);
     }
 
-    private void CleanActionCanvas()
+    public void CleanActionCanvas()
     {
         if (instantiatedCanvas)
         {
