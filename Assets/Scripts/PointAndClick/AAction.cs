@@ -39,7 +39,11 @@ public abstract class AAction : MonoBehaviour
 
     public virtual void PerformAction()
     {
-        soundManager.PlayPerformActionSound();
+        if (actionSO.DelayObtained != 0)
+        {
+            soundManager.PlayPerformActionSound();
+        }
+
         uIInGameManager.CleanActionCanvas();
         uIInGameManager.SetDescription(actionSO.ActionDescription);
         timerManager.AddTime(actionSO.DelayObtained);
