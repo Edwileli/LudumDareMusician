@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5919510777262151861}
   - component: {fileID: 7316528762751915792}
   - component: {fileID: 4786622084267729882}
+  - component: {fileID: 2211032671753264124}
+  - component: {fileID: 5250880932539955028}
   m_Layer: 0
   m_Name: CoffeeMug
   m_TagString: Untagged
@@ -82,3 +84,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2211032671753264124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443950802288427535}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0025617692, y: 0.0018000003, z: 0.0020000003}
+  m_Center: {x: -0.00038088454, y: 1.1351244e-11, z: -4.1924784e-12}
+--- !u!114 &5250880932539955028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443950802288427535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6699a342e45b8834fb97a07ae5fe6f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectSO: {fileID: 11400000, guid: 2cfa587c3a8f71647bbf7accdafaee08, type: 2}

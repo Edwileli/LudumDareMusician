@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947dd30091f141446b4388d90f76d58a, type: 3}
+  m_Name: action_spilldrinkl_so
+  m_EditorClassIdentifier: 
+  ActionTitle: Spill drink over the paper
+  ActionDescription: You're absolutely crushing it!
+  DelayObtained: 20
+  ListCombination:
+  - {fileID: 11400000, guid: 88c68a9cf10d6614da66ac5235a60f31, type: 2}
+  - {fileID: 11400000, guid: aa98c7d4d48417c47a0c5657aeb6c03f, type: 2}

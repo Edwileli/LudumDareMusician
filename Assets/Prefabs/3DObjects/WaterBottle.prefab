@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4721336572736644153}
   - component: {fileID: 8514711557220346780}
   - component: {fileID: 5894827381911773014}
+  - component: {fileID: 3714473426429148760}
+  - component: {fileID: 3114391610869255985}
   m_Layer: 0
   m_Name: WaterBottle
   m_TagString: Untagged
@@ -82,3 +84,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3714473426429148760
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390349388851150467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0020016453, y: 0.0020010853, z: 0.0076096593}
+  m_Center: {x: -0.00000082276523, y: -5.820765e-11, z: 0.00022241317}
+--- !u!114 &3114391610869255985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390349388851150467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6699a342e45b8834fb97a07ae5fe6f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectSO: {fileID: 11400000, guid: aa98c7d4d48417c47a0c5657aeb6c03f, type: 2}
