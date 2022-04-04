@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class ActionSoundCheck : AAction
 {
@@ -8,5 +5,6 @@ public class ActionSoundCheck : AAction
     {
         base.PerformAction();
         actionsManager.EmptySelectedObjectsList();
+        Destroy(gameObject.GetComponent<ActionSoundCheck>());
     }
 }

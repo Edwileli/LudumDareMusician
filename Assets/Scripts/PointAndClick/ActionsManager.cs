@@ -16,6 +16,8 @@ public class ActionsManager : MonoBehaviour
     public List<AAction> FindAvailableActionForAnObject(InteractiveGameObjectSO objectSO)
     {
         List<AAction> availableActions = new List<AAction>();
+        aActionList = new List<AAction>(GetComponents<AAction>());
+
         //Debug.Log("objectSO.ActionsForThisObject " + objectSO.ActionsForThisObject.Count);
 
         foreach (ActionSO actionSO in objectSO.ActionsForThisObject)
@@ -24,7 +26,7 @@ public class ActionsManager : MonoBehaviour
             {
                 if (aAction.actionSO == actionSO)
                 {
-                    //Debug.Log("action found in manager");
+                    //Debug.Log("action "+ actionSO.ActionTitle + "found in manager");
                     if (actionSO.ListCombination.Count == 0)
                     {
                         //Debug.Log("no combination");
@@ -37,7 +39,7 @@ public class ActionsManager : MonoBehaviour
                         //Debug.Log("SelectedObjectsList.Count: " + SelectedObjectsList.Count);
 
                         bool sameLists = CompareInteractiveObjectLists(actionSO.ListCombination, SelectedObjectsList);
-                        Debug.Log("sameLists " + sameLists);
+                        //Debug.Log("sameLists " + sameLists);
                         if (sameLists)
                         {
                             availableActions.Add(aAction);

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class ActionCheckStrings : AAction
 {
@@ -8,5 +5,6 @@ public class ActionCheckStrings : AAction
     {
         base.PerformAction();
         actionsManager.EmptySelectedObjectsList();
+        Destroy(gameObject.GetComponent<ActionCheckStrings>());
     }
 }
