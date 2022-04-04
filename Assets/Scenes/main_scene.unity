@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749268, g: 0.21147677, b: 0.14576986, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749018, g: 0.21147372, b: 0.14576763, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -531,6 +531,15 @@ PrefabInstance:
     - target: {fileID: 6201943913728817144, guid: 0759e75646af35c49995d0d7baa6e49b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745155773798738015, guid: 0759e75646af35c49995d0d7baa6e49b, type: 3}
+      propertyPath: m_Text
+      value: "\u2019Twas opening night and everyone was getting ready.\r\n\nConcertgoers
+        are streaming in, waiting for the performance to begin.\r\n\nBehind the scenes,
+        the staff were running around doing last-minute checking.\r\n\nAnd while
+        everyone prepares to start the show, a musician is pacing around the dressing
+        room.\r\n\nThe musician stops pacing and mutters \u2018Operation: Time to
+        delay the concert!\u2019 they smirked in triumph.\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0759e75646af35c49995d0d7baa6e49b, type: 3}
