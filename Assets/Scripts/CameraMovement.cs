@@ -19,12 +19,10 @@ public class CameraMovement : MonoBehaviour
     {
         if (currentCamera.transform.localEulerAngles.y < 200 && (Input.GetKey("right") || (Input.GetKey("d"))))
         {
-            Debug.Log("turning right on " + gameObject.name);
             currentCamera.transform.Rotate(new Vector3(0f, cameraSpeed, 0f));
         }
         else if (currentCamera.transform.localEulerAngles.y > 150 && (Input.GetKey("left") || (Input.GetKey("a"))))
         {
-            Debug.Log("turning left on " + gameObject.name);
             currentCamera.transform.Rotate(new Vector3(0f, -cameraSpeed, 0f));
         }
     }
