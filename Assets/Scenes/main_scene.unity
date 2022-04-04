@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749268, g: 0.21147677, b: 0.14576986, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749062, g: 0.21147431, b: 0.14576808, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -562,6 +562,26 @@ PrefabInstance:
     - target: {fileID: 3464468357047378180, guid: be8b03cb98f776a459c81a7ec433e249, type: 3}
       propertyPath: m_Name
       value: Managers
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581183763124056870, guid: be8b03cb98f776a459c81a7ec433e249, type: 3}
+      propertyPath: roomMusic.Path
+      value: event:/Room Music/Room Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581183763124056870, guid: be8b03cb98f776a459c81a7ec433e249, type: 3}
+      propertyPath: roomMusic.Guid.Data1
+      value: -541025351
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581183763124056870, guid: be8b03cb98f776a459c81a7ec433e249, type: 3}
+      propertyPath: roomMusic.Guid.Data2
+      value: 1205733389
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581183763124056870, guid: be8b03cb98f776a459c81a7ec433e249, type: 3}
+      propertyPath: roomMusic.Guid.Data3
+      value: -286497354
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581183763124056870, guid: be8b03cb98f776a459c81a7ec433e249, type: 3}
+      propertyPath: roomMusic.Guid.Data4
+      value: 647588793
       objectReference: {fileID: 0}
     - target: {fileID: 8061413953605753349, guid: be8b03cb98f776a459c81a7ec433e249, type: 3}
       propertyPath: m_RootOrder

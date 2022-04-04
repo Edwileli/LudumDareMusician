@@ -361,6 +361,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Concert
   - Menu
   - Room Music
   - Room SD

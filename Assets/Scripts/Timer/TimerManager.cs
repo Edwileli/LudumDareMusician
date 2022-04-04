@@ -1,6 +1,9 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public class TimerManager : MonoBehaviour
 {
@@ -9,6 +12,7 @@ public class TimerManager : MonoBehaviour
     public float timeThresholdForChangeColor = 60f;
     public Color normalColor = Color.black;
     public Color colorWhenThereTimeEnds = Color.red;
+    public EventReference roomMusic;
 
     private bool timerHasBegan = false;
     private float timeRemaining = 0f;
@@ -16,6 +20,8 @@ public class TimerManager : MonoBehaviour
     private Text timerText = null;
     private TimerText timerTextScript = null;
     private TimerPanel timerPanel = null;
+    private EventInstance musicInstance;
+    private EditorParamRef.ParameterID musicTimeLeftParameterID;
 
     void Awake()
     {
@@ -31,6 +37,9 @@ public class TimerManager : MonoBehaviour
         }
         timerText = timerTextScript.GetComponent<Text>();
         timerPanel.gameObject.SetActive(false);//hiding timer before the game starts
+
+        musicInstance = AudioHelpers.PlayEvent(roomMusic, this);
+        musicTimeLeftParameterID = AudioHelpers.GetGlobalParameterId("Time left");
     }
 
     private void Update()
@@ -42,6 +51,7 @@ public class TimerManager : MonoBehaviour
             if (timeRemaining < 0)
             {
                 Debug.Log("End");
+                musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
                 SceneManager.LoadScene("end_scene", LoadSceneMode.Single);
             }
 
@@ -58,7 +68,9 @@ public class TimerManager : MonoBehaviour
             int seconds = Mathf.FloorToInt(timeRemaining - minutes * 60);
             string niceTime = string.Format("{0:00}:{1:00}", minutes, seconds);
             timerText.text = niceTime;
-        }        
+        }
+            
+        AudioHelpers.SetGlobalParameter(musicTimeLeftParameterID, timerHasBegan ? timeRemaining : 7);   
     }
 
     public void AddTime(float timeToAdd)
