@@ -348,10 +348,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 26821083075556414, guid: 0759e75646af35c49995d0d7baa6e49b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 646.18
-      objectReference: {fileID: 0}
     - target: {fileID: 1309285232012246203, guid: 0759e75646af35c49995d0d7baa6e49b, type: 3}
       propertyPath: m_Name
       value: MainGameCanvas
@@ -476,6 +472,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4611319725625924271, guid: 0759e75646af35c49995d0d7baa6e49b, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 674553dea900db04282297489ddcf5a0, type: 3}
     - target: {fileID: 5149840531246102153, guid: 0759e75646af35c49995d0d7baa6e49b, type: 3}
       propertyPath: m_IsActive
       value: 0
