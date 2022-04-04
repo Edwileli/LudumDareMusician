@@ -9,6 +9,7 @@ public class UIInGameManager : MonoBehaviour
     public GameObject PanelActionsPrefab = null;
     public GameObject ActionButtonPrefab = null;
     public Text ActionDescription = null;
+    public GameObject ActionDescriptionPanel = null;
 
     private GameObject instantiatedCanvas = null;
     private GameObject instantiatedPanel = null;
@@ -35,7 +36,12 @@ public class UIInGameManager : MonoBehaviour
         {
             Debug.Log("ActionDescription missing on " + gameObject.name);
         }
-        
+        if (!ActionDescriptionPanel)
+        {
+            Debug.Log("ActionDescriptionPanel missing on " + gameObject.name);
+        }
+
+
 
         soundManager = FindObjectOfType<SoundManager>();
         if (!soundManager)
@@ -44,16 +50,18 @@ public class UIInGameManager : MonoBehaviour
         }
 
         ActionDescription.gameObject.SetActive(false);
+        ActionDescriptionPanel.SetActive(false);
     }
 
-    public void DisplayPanelAction(Vector3 position, List<AAction> actionList)
+    public void DisplayPanelAction(Transform canvasTransform, List<AAction> actionList)
     {
         CleanActionCanvas();
         
         soundManager.PlayOpenActionsSound();
 
         instantiatedCanvas = Instantiate(CanvasActionPrefab);
-        instantiatedCanvas.transform.position = position;
+        instantiatedCanvas.transform.position = canvasTransform.position;
+        instantiatedCanvas.transform.rotation = canvasTransform.rotation;
 
         instantiatedPanel = Instantiate(PanelActionsPrefab, instantiatedCanvas.transform);
 
@@ -66,12 +74,11 @@ public class UIInGameManager : MonoBehaviour
             button.onClick.AddListener(() => action.PerformAction());
             instantiatedActionButtonList.Add(instantiatedButton);
 
-            //todo remove action from object once it's done
         }
 
         Canvas canvas = instantiatedCanvas.GetComponent<Canvas>();
         Vector2 movePos = new Vector2();
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, position, canvas.worldCamera, out movePos);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, canvasTransform.position, canvas.worldCamera, out movePos);
     }
 
     public void CleanActionCanvas()
@@ -109,6 +116,7 @@ public class UIInGameManager : MonoBehaviour
 
     public void SetDescription(string description)
     {
+        ActionDescriptionPanel.SetActive(true);
         ActionDescription.gameObject.SetActive(true);
         ActionDescription.text = description;
         closeDescriptionCoroutine = HideDescription(10);
@@ -118,6 +126,7 @@ public class UIInGameManager : MonoBehaviour
     private IEnumerator HideDescription(float timeToWait)
     {
         yield return new WaitForSeconds(timeToWait);
-        ActionDescription.gameObject.SetActive(true);
+        ActionDescription.gameObject.SetActive(false);
+        ActionDescriptionPanel.SetActive(false);
     }
 }

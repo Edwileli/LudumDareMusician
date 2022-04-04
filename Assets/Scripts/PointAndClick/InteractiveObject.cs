@@ -44,9 +44,9 @@ public class InteractiveObject : MonoBehaviour
             Debug.Log(gameObject.name + " clicked");
             actionsManager.SetCurrentInteractiveObject(ObjectSO);
             actionToDisplay = actionsManager.FindAvailableActionForAnObject(ObjectSO);
-            Vector3 positionToDisplayActions = Vector3.Lerp(currentCamera.transform.position, transform.position, 0.9f);
-
-            uIInGameManager.DisplayPanelAction(positionToDisplayActions, actionToDisplay);
+            //Vector3 positionToDisplayActions = Vector3.Lerp(currentCamera.transform.position, transform.position, 0.9f);
+            Transform canvasTransform = gameObject.GetComponentInChildren<CanvasDisplayPosition>().gameObject.transform;
+            uIInGameManager.DisplayPanelAction(canvasTransform, actionToDisplay);
         }
         else
         {
