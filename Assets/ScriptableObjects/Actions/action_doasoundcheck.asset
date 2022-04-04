@@ -10,6 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 947dd30091f141446b4388d90f76d58a, type: 3}
-  m_Name: action_take_so
+  m_Name: action_doasoundcheck
   m_EditorClassIdentifier: 
-  ActionName: Take
+  ActionTitle: Do a soundcheck
+  ActionDescription: 
+  DelayObtained: 5
+  ListCombination:
+  - {fileID: 11400000, guid: c4ca2c62d2d12b74caa46a935b38b7ef, type: 2}
+  - {fileID: 11400000, guid: 980f2a639343da842b4dbbecf93278f3, type: 2}
+  - {fileID: 11400000, guid: d26a92d93032cb94bbaa4db84d83f26f, type: 2}
