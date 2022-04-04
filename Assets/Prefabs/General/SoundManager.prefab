@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4657649020133279135}
+  - component: {fileID: 1535620431054911044}
   - component: {fileID: 4657649020133279128}
   m_Layer: 0
   m_Name: SoundManager
@@ -31,6 +32,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1535620431054911044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4657649020133279129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Menu
+  - Room SD
+  CollisionTag: 
+  PreloadSamples: 1
 --- !u!114 &4657649020133279128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,10 +63,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba62f822e8146649a800f639db87204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventReference:
+  menuButton:
     Guid:
       Data1: 2102954121
       Data2: 1217086997
       Data3: -81368385
       Data4: -795339794
     Path: event:/Menu/Menu button click
+  openActions:
+    Guid:
+      Data1: -739488186
+      Data2: 1227375136
+      Data3: -478378308
+      Data4: 845936865
+    Path: event:/Room SD/Close Actions
+  closeActions:
+    Guid:
+      Data1: -739488186
+      Data2: 1227375136
+      Data3: -478378308
+      Data4: 845936865
+    Path: event:/Room SD/Close Actions
+  performAction:
+    Guid:
+      Data1: -1077631469
+      Data2: 1169043045
+      Data3: 184243616
+      Data4: 918354459
+    Path: event:/Room SD/Perform Action

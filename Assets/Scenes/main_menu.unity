@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 61056162}
   - component: {fileID: 61056161}
-  - component: {fileID: 61056164}
   - component: {fileID: 61056163}
   - component: {fileID: 61056160}
   m_Layer: 0
@@ -246,24 +245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
   ListenerNumber: -1
---- !u!114 &61056164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61056159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadEvent: 1
-  UnloadEvent: 0
-  Banks:
-  - Menu
-  CollisionTag: 
-  PreloadSamples: 1
 --- !u!1 &153930244 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2266102949729789102, guid: 5f2e2c5edd1aeb94db8a85a4d78362cc, type: 3}
@@ -367,26 +348,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
-      propertyPath: menuButton.Path
-      value: event:/Menu/Menu button click
-      objectReference: {fileID: 0}
-    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
-      propertyPath: menuButton.Guid.Data1
-      value: 2102954121
-      objectReference: {fileID: 0}
-    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
-      propertyPath: menuButton.Guid.Data2
-      value: 1217086997
-      objectReference: {fileID: 0}
-    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
-      propertyPath: menuButton.Guid.Data3
-      value: -81368385
-      objectReference: {fileID: 0}
-    - target: {fileID: 4657649020133279128, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
-      propertyPath: menuButton.Guid.Data4
-      value: -795339794
-      objectReference: {fileID: 0}
     - target: {fileID: 4657649020133279129, guid: fb487d9d2af74f14b95de4f365264908, type: 3}
       propertyPath: m_Name
       value: SoundManager

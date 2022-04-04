@@ -15,6 +15,8 @@ public class UIInGameManager : MonoBehaviour
     private List<GameObject> instantiatedActionButtonList = new List<GameObject>();
     private IEnumerator closeDescriptionCoroutine;
 
+    private SoundManager soundManager = null;
+
     void Awake()
     {
         if (!CanvasActionPrefab)
@@ -33,6 +35,13 @@ public class UIInGameManager : MonoBehaviour
         {
             Debug.Log("ActionDescription missing on " + gameObject.name);
         }
+        
+
+        soundManager = FindObjectOfType<SoundManager>();
+        if (!soundManager)
+        {
+            Debug.Log("soundManager missing on " + gameObject.name);
+        }
 
         ActionDescription.gameObject.SetActive(false);
     }
@@ -40,6 +49,8 @@ public class UIInGameManager : MonoBehaviour
     public void DisplayPanelAction(Vector3 position, List<AAction> actionList)
     {
         CleanActionCanvas();
+        
+        soundManager.PlayOpenActionsSound();
 
         instantiatedCanvas = Instantiate(CanvasActionPrefab);
         instantiatedCanvas.transform.position = position;
@@ -75,6 +86,8 @@ public class UIInGameManager : MonoBehaviour
         }
         if (instantiatedActionButtonList.Count > 0)
         {
+            soundManager.PlayCloseActionsSound();
+            
             foreach (GameObject o in instantiatedActionButtonList)
             {
                 Destroy(o);

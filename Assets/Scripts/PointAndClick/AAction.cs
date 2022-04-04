@@ -6,6 +6,7 @@ public abstract class AAction : MonoBehaviour
 
     private TimerManager timerManager = null;
     private UIInGameManager uIInGameManager = null;
+    private SoundManager soundManager = null;
 
     void Awake()
     {
@@ -20,10 +21,17 @@ public abstract class AAction : MonoBehaviour
         {
             Debug.Log("timerManager missing on " + gameObject.name);
         }
+
+        soundManager = FindObjectOfType<SoundManager>();
+        if (!soundManager)
+        {
+            Debug.Log("soundManager missing on " + gameObject.name);
+        }
     }
 
     public virtual void PerformAction()
     {
+        soundManager.PlayPerformActionSound();
         uIInGameManager.CleanActionCanvas();
         uIInGameManager.SetDescription(actionSO.ActionDescription);
         timerManager.AddTime(actionSO.DelayObtained);
