@@ -26,15 +26,8 @@ public static class AudioHelpers
         }
     }
 
-    public static PARAMETER_ID GetGlobalParameterId(string parameterName)
+    public static void SetGlobalParameter(string parameterName, float value)
     {
-        RuntimeManager.StudioSystem.getParameterDescriptionByName(parameterName, out var parameterDescription);
-
-        return parameterDescription.id;
-    }
-
-    public static void SetGlobalParameter(PARAMETER_ID parameterId, float value)
-    {
-        RuntimeManager.StudioSystem.setParameterByID(parameterId, value);
+        RuntimeManager.StudioSystem.setParameterByName(parameterName, value);
     }
 }

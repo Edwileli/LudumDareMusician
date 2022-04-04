@@ -21,7 +21,6 @@ public class TimerManager : MonoBehaviour
     private TimerText timerTextScript = null;
     private TimerPanel timerPanel = null;
     private EventInstance musicInstance;
-    private EditorParamRef.ParameterID musicTimeLeftParameterID;
 
     void Awake()
     {
@@ -39,7 +38,6 @@ public class TimerManager : MonoBehaviour
         timerPanel.gameObject.SetActive(false);//hiding timer before the game starts
 
         musicInstance = AudioHelpers.PlayEvent(roomMusic, this);
-        musicTimeLeftParameterID = AudioHelpers.GetGlobalParameterId("Time left");
     }
 
     private void Update()
@@ -70,7 +68,7 @@ public class TimerManager : MonoBehaviour
             timerText.text = niceTime;
         }
             
-        AudioHelpers.SetGlobalParameter(musicTimeLeftParameterID, timerHasBegan ? timeRemaining : 7);   
+        AudioHelpers.SetGlobalParameter("Time left", timerHasBegan ? timeRemaining : 7);   
     }
 
     public void AddTime(float timeToAdd)
