@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionCheckStrings : AAction
+public class ActionCombine : AAction
 {
     public override void PerformAction()
     {
+        //base.actionsManager.SelectedObjectsList.Add(base.currentInteractiveObject);
         base.PerformAction();
-        actionsManager.EmptySelectedObjectsList();
     }
 }

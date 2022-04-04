@@ -71,7 +71,7 @@ public class TimerManager : MonoBehaviour
     {
         //init timer
         timeWhenTheGameBegins = Time.time;
-        Debug.Log("timeWhenTheGameBegins " + timeWhenTheGameBegins);
+        //Debug.Log("timeWhenTheGameBegins " + timeWhenTheGameBegins);
         timerHasBegan = true;
 
         //display timer

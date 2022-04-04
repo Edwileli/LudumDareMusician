@@ -7,5 +7,6 @@ public class ActionSoundCheck : AAction
     public override void PerformAction()
     {
         base.PerformAction();
+        actionsManager.EmptySelectedObjectsList();
     }
 }

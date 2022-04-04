@@ -42,6 +42,7 @@ public class InteractiveObject : MonoBehaviour
         if (!EventSystem.current.IsPointerOverGameObject())
         {
             Debug.Log(gameObject.name + " clicked");
+            actionsManager.SetCurrentInteractiveObject(ObjectSO);
             actionToDisplay = actionsManager.FindAvailableActionForAnObject(ObjectSO);
             Vector3 positionToDisplayActions = Vector3.Lerp(currentCamera.transform.position, transform.position, 0.9f);
 

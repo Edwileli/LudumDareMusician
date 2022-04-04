@@ -5,7 +5,7 @@ public class MenuButtons : MonoBehaviour
 {
     public void PlayGameButton()
     {
-        Debug.Log("Play");
+        //Debug.Log("Play");
         SceneManager.LoadScene("main_scene", LoadSceneMode.Single);
     }
 

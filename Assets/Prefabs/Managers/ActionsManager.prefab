@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3126042223746942746}
   - component: {fileID: 2122051631651705621}
   - component: {fileID: 4617431485792758012}
+  - component: {fileID: 8780478272874558145}
   m_Layer: 0
   m_Name: ActionsManager
   m_TagString: Untagged
@@ -45,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75ef7a3b93bfff4e8c9bea90ae7496a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SelectedObjectsList: []
 --- !u!114 &2122051631651705621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionSO: {fileID: 11400000, guid: f500f67c797e2f146ac34d98ffef0570, type: 2}
+  currentInteractiveObject: {fileID: 0}
 --- !u!114 &4617431485792758012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,3 +74,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionSO: {fileID: 11400000, guid: 96183cc56491832468951a4e1d76956c, type: 2}
+  currentInteractiveObject: {fileID: 0}
+--- !u!114 &8780478272874558145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087032488700610544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ae804f21bbf3746979b579cf5a9381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionSO: {fileID: 11400000, guid: 097aced549ac77b41a20edfa8ee793eb, type: 2}
+  currentInteractiveObject: {fileID: 0}
