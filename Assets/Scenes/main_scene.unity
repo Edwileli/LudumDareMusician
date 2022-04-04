@@ -536,10 +536,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u2019Twas opening night and everyone was getting ready.\r\n\nConcertgoers
         are streaming in, waiting for the performance to begin.\r\n\nBehind the scenes,
-        the staff were running around doing last-minute checking.\r\n\nAnd while
-        everyone prepares to start the show, a musician is pacing around the dressing
-        room.\r\n\nThe musician stops pacing and mutters \u2018Operation: Time to
-        delay the concert!\u2019 they smirked in triumph.\r\n"
+        the staff was running around doing last-minute checking.\r\n\nAnd while everyone
+        prepares to start the show, a musician is pacing around the dressing room.\r\n\nThe
+        musician stops pacing and mutters \u2018Operation: Time to delay the concert!\u2019
+        they smirked in triumph.\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0759e75646af35c49995d0d7baa6e49b, type: 3}
