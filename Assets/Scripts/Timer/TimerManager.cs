@@ -30,7 +30,6 @@ public class TimerManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Time.time " + Time.time);
         timeRemaining = timeWhenTheGameBegins + timeGivenAtStart + timeModifiers - Time.time;
 
         if (timeRemaining < 0)
