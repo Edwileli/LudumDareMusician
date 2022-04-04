@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2295521807938980831}
   - component: {fileID: 2521888092521307923}
   - component: {fileID: 263593219372654995}
+  - component: {fileID: 1736278396447898049}
   m_Layer: 5
   m_Name: PanelTimer
   m_TagString: Untagged
@@ -104,6 +105,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1736278396447898049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5178482096874441185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f31bded60971843a9ea14d875d466c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5632046953672949029
 GameObject:
   m_ObjectHideFlags: 0
