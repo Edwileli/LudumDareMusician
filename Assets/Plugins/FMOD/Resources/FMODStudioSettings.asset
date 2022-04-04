@@ -361,6 +361,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Concert
   - Menu
   - Room Music
   - Room SD
@@ -376,7 +377,7 @@ MonoBehaviour:
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131588
   HideSetupWizard: 1
-  LastEventReferenceScanVersion: 0
+  LastEventReferenceScanVersion: 131588
   Platforms:
   - {fileID: -8460626666908294971}
   - {fileID: -8427720185805911829}

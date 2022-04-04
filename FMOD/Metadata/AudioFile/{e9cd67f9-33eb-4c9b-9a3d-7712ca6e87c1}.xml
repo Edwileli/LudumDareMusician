@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e9cd67f9-33eb-4c9b-9a3d-7712ca6e87c1}">
+		<property name="assetPath">
+			<value>2022-04-02-ludum-dare-musician-sd-close-wheel.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.75</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0b626466-b0e2-4e2b-96a2-dc17b9a379d7}</destination>
+		</relationship>
+	</object>
+</objects>

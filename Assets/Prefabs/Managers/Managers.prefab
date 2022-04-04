@@ -102,6 +102,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8061413953605753349}
     m_Modifications:
+    - target: {fileID: 149045647703653679, guid: 1fe595c676dc2574aaebfa5a5aaac055, type: 3}
+      propertyPath: roomMusic.Path
+      value: event:/Room Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 149045647703653679, guid: 1fe595c676dc2574aaebfa5a5aaac055, type: 3}
+      propertyPath: roomMusic.Guid.Data1
+      value: -541025351
+      objectReference: {fileID: 0}
+    - target: {fileID: 149045647703653679, guid: 1fe595c676dc2574aaebfa5a5aaac055, type: 3}
+      propertyPath: roomMusic.Guid.Data2
+      value: 1205733389
+      objectReference: {fileID: 0}
+    - target: {fileID: 149045647703653679, guid: 1fe595c676dc2574aaebfa5a5aaac055, type: 3}
+      propertyPath: roomMusic.Guid.Data3
+      value: -286497354
+      objectReference: {fileID: 0}
+    - target: {fileID: 149045647703653679, guid: 1fe595c676dc2574aaebfa5a5aaac055, type: 3}
+      propertyPath: roomMusic.Guid.Data4
+      value: 647588793
+      objectReference: {fileID: 0}
     - target: {fileID: 4691339545851124413, guid: 1fe595c676dc2574aaebfa5a5aaac055, type: 3}
       propertyPath: m_Name
       value: TimerManager

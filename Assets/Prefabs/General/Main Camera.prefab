@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7347191900529226759}
   - component: {fileID: 7347191900529226758}
+  - component: {fileID: 2662026215344664262}
   - component: {fileID: 7384050081805851476}
   - component: {fileID: 7347191900529226756}
   - component: {fileID: 8477782645609386496}
@@ -77,6 +78,25 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2662026215344664262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7347191900529226763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 0
+  Banks:
+  - Room Music
+  - Room SD
+  CollisionTag: 
+  PreloadSamples: 1
 --- !u!114 &7384050081805851476
 MonoBehaviour:
   m_ObjectHideFlags: 0
