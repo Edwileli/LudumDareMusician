@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class ActionsManager : MonoBehaviour
@@ -17,7 +16,7 @@ public class ActionsManager : MonoBehaviour
     public List<AAction> FindAvailableActionForAnObject(InteractiveGameObjectSO objectSO)
     {
         List<AAction> availableActions = new List<AAction>();
-        Debug.Log("objectSO.ActionsForThisObject " + objectSO.ActionsForThisObject.Count);
+        //Debug.Log("objectSO.ActionsForThisObject " + objectSO.ActionsForThisObject.Count);
 
         foreach (ActionSO actionSO in objectSO.ActionsForThisObject)
         {
@@ -25,17 +24,17 @@ public class ActionsManager : MonoBehaviour
             {
                 if (aAction.actionSO == actionSO)
                 {
-                    Debug.Log("action found in manager");
+                    //Debug.Log("action found in manager");
                     if (actionSO.ListCombination.Count == 0)
                     {
-                        Debug.Log("no combination");
+                        //Debug.Log("no combination");
                         aAction.currentInteractiveObject = objectSO;
                         availableActions.Add(aAction);
                     }
                     else
                     {
-                        Debug.Log("combination required: " + actionSO.ListCombination.Count);
-                        Debug.Log("SelectedObjectsList.Count: " + SelectedObjectsList.Count);
+                        //Debug.Log("combination required: " + actionSO.ListCombination.Count);
+                        //Debug.Log("SelectedObjectsList.Count: " + SelectedObjectsList.Count);
 
                         bool sameLists = CompareInteractiveObjectLists(actionSO.ListCombination, SelectedObjectsList);
                         Debug.Log("sameLists " + sameLists);
@@ -47,12 +46,16 @@ public class ActionsManager : MonoBehaviour
                 }
             }
         }
-        Debug.Log("availableActions.Count " + availableActions.Count);
+        //Debug.Log("availableActions.Count " + availableActions.Count);
         return availableActions;
     }
 
     public void SetCurrentInteractiveObject(InteractiveGameObjectSO interactiveObject)
     {
+        if(SelectedObjectsList.Count>=3)
+        {
+            SelectedObjectsList.RemoveAt(0);
+        }
         SelectedObjectsList.Add(interactiveObject);
     }
 
@@ -73,16 +76,17 @@ public class ActionsManager : MonoBehaviour
                 {
                     if (a[i].ObjectName == b[j].ObjectName)
                     {
+                        Debug.Log("a[i].ObjectName:" + a[i].ObjectName + ", b[j].ObjectName" + b[j].ObjectName);
                         nameFound[i] = true;
                     }
                 }
             }
 
-            bool allTrue = true;
             for (int k = 0; k < nameFound.Length; k++)
             {
                 if (nameFound[k] == false)
                 {
+
                     return false;
                 }
             }

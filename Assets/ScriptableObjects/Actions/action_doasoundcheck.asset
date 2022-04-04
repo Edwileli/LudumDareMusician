@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: action_doasoundcheck
   m_EditorClassIdentifier: 
   ActionTitle: Do a soundcheck
-  ActionDescription: 
-  DelayObtained: 5
+  ActionDescription: A round of applause, you're ruining the show!
+  DelayObtained: 30
   ListCombination:
   - {fileID: 11400000, guid: c4ca2c62d2d12b74caa46a935b38b7ef, type: 2}
   - {fileID: 11400000, guid: 980f2a639343da842b4dbbecf93278f3, type: 2}

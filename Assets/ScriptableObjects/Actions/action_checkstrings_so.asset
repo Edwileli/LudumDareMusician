@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: action_checkstrings_so
   m_EditorClassIdentifier: 
   ActionTitle: Check the tuning of strings
-  ActionDescription: Dzing dzing, 30 seconds for me!
-  DelayObtained: 30
+  ActionDescription: "You\u2019re didn't combine anything, don't stop searching!"
+  DelayObtained: 10
   ListCombination: []

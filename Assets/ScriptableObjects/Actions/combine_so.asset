@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActionTitle: Combine with...
   ActionDescription: 
-  DelayObtained: 5
+  DelayObtained: 0
   ListCombination: []

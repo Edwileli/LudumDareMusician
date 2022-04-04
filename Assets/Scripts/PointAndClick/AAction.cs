@@ -3,7 +3,9 @@ using UnityEngine;
 public abstract class AAction : MonoBehaviour
 {
     public ActionSO actionSO = null;
+    public InteractiveGameObjectSO currentInteractiveObject = null;
 
+    protected ActionsManager actionsManager = null;
     private TimerManager timerManager = null;
     private UIInGameManager uIInGameManager = null;
     private SoundManager soundManager = null;
@@ -27,6 +29,12 @@ public abstract class AAction : MonoBehaviour
         {
             Debug.Log("soundManager missing on " + gameObject.name);
         }
+
+        actionsManager = FindObjectOfType<ActionsManager>();
+        if (!actionsManager)
+        {
+            Debug.Log("actionsManager missing on " + gameObject.name);
+        }
     }
 
     public virtual void PerformAction()
@@ -36,6 +44,4 @@ public abstract class AAction : MonoBehaviour
         uIInGameManager.SetDescription(actionSO.ActionDescription);
         timerManager.AddTime(actionSO.DelayObtained);
     }
-
-    //todo call PerformAction() on button click (delegate)
 }
