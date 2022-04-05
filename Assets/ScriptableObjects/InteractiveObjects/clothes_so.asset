@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectName: Clothes
   ObjectIcon: {fileID: 21300000, guid: 6e3f2337115de6e4fbafe43dbe8df63a, type: 3}
-  ActionsForThisObject: []
+  ActionsForThisObject:
+  - {fileID: 11400000, guid: 097aced549ac77b41a20edfa8ee793eb, type: 2}
+  - {fileID: 11400000, guid: 336642ce526ae3440b214e7b804a6741, type: 2}
+  - {fileID: 11400000, guid: 58bd1907269bf424dbe9d3908139e21a, type: 2}

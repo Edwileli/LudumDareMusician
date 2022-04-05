@@ -1236,7 +1236,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: NonInteractiveEnvironment
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1304213513164577764, guid: bc9bd1dcfb6e3254cbeff733625c3ebf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc9bd1dcfb6e3254cbeff733625c3ebf, type: 3}
 --- !u!1001 &7347191900991549918
 PrefabInstance:

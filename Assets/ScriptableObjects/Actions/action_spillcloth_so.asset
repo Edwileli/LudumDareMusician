@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 947dd30091f141446b4388d90f76d58a, type: 3}
-  m_Name: combine_so
+  m_Name: action_spillcloth_so
   m_EditorClassIdentifier: 
-  ActionTitle: Combine with...
-  ActionDescription: Trying to combine with...
-  DelayObtained: 0
-  ListCombination: []
+  ActionTitle: Spill water on your clothes
+  ActionDescription: You're absolutely crushing it!
+  DelayObtained: 20
+  ListCombination:
+  - {fileID: 11400000, guid: 8df0d4803408a1642989ca64b97b0e25, type: 2}
+  - {fileID: 11400000, guid: aa98c7d4d48417c47a0c5657aeb6c03f, type: 2}
