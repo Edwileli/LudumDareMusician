@@ -63,7 +63,7 @@ public class ActionsManager : MonoBehaviour
 
     public void EmptySelectedObjectsList()
     {
-        List<InteractiveGameObjectSO> selectedObjectsList = new List<InteractiveGameObjectSO>();
+        SelectedObjectsList = new List<InteractiveGameObjectSO>();
     }
 
     public bool CompareInteractiveObjectLists(List<InteractiveGameObjectSO> a, List<InteractiveGameObjectSO> b)
