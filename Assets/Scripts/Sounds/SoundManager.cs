@@ -8,6 +8,12 @@ public class SoundManager : MonoBehaviour
     public EventReference closeActions;
     public EventReference performAction;
 
+    public void ResetAfterFirstInteraction()
+    {
+        RuntimeManager.CoreSystem.mixerSuspend();
+        RuntimeManager.CoreSystem.mixerResume();
+    }
+    
     public void PlayButtonSound()
     {
         AudioHelpers.PlayEvent(menuButton, this);
